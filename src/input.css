@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .bg-darkblue {
+    background-color: #1E3A8A; /* <--- Rang preview ko‘rinadi */
+}
+.softPink{ 
+   background-color:  #010339;
+   }
+   .lightBlue{
+background-color:#DBEAFE ;
+}
+   
+   
+}
+
