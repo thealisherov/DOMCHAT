@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Chat UI</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-sky-100 to-purple-100 min-h-screen flex items-center justify-center p-4"
+  >
+    <div
+      class="main container m-auto flex min-h-[90vh] w-full max-w-7xl rounded-3xl shadow-2xl overflow-hidden bg-white/30 backdrop-blur-md"
+    >
+      <!-- lEFT SIDE -->
+      <div
+        class="w-[20%] h-[100vh] border-r border-gray-300 bg-pink-100 p-4 rounded-l-3xl flex flex-col"
+      >
+        <!-- Tepadagi Contacts -->
+        <div
+          class="w-full h-20 bg-white rounded-xl shadow-md flex items-center justify-center text-gray-700 font-semibold text-lg mb-4"
+        >
+          Contacts
+        </div>
+
+        <!-- PLACE FOR ADDED CONTACTS -->
+        <div
+          class="contactplace max-h-[600] h-[80%] flex-1 overflow-y-auto space-y-3 p-3 bg-white rounded-2xl border-2 border-amber-950 m-3"
+        ></div>
+
+        <!-- Pastdagi Add Contact -->
+        <div class="mt-4 flex items-center space-x-2">
+          <input
+            type="text"
+            id="contactAdd"
+            placeholder="Add contact"
+            class="flex-1 px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
+          />
+          <button
+            onclick="addContact()"
+            class="bg-pink-500 hover:bg-pink-600 text-white p-2 rounded-md"
+          >
+            <img src="./assests/plus.png" alt="Add" class="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Chat  -->
+      <div
+        class="chatTool w-[80%] flex flex-col justify-between bg-blue-100 p-4 rounded-r-3xl"
+      >
+        <div
+          class="textplace w-full max-h-[80%] h-[80%] scroll-auto rounded-xl bg-white shadow-inner p-4 overflow-y-auto"
+        ></div>
+
+        <!-- Input area -->
+        <div class="typer w-full h-[12%] mt-4 flex items-center gap-3">
+          <input
+            type="text"
+            placeholder="Write anything..."
+            class="flex-1 h-full px-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-sm"
+          />
+          <div
+            onclick="sendMessage()"
+            class="send w-12 h-12 bg-gradient-to-br rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-200"
+          >
+            <img src="./assests/paper-plane.png" alt="send" class="w-6 h-6" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./app.js"></script>
+</html>
